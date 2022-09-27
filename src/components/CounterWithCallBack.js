@@ -4,16 +4,18 @@ function CounterWithCallBack() {
     const[counterInCallBack,setCounterInCallBack]=useState(0);
 
     function incrementCounter(){
-   setCounterInCallBack((currentCount)=>{
-currentCount=+1;
-console.log("Counter in callBack is ",currentCount);
-return currentCount;
-   })
 
-    }
+   setCounterInCallBack((counterInCallBack)=>counterInCallBack+1)
+   setCounterInCallBack((counterInCallBack)=>counterInCallBack+1)
+
+    console.log("Counter in callback function is :",counterInCallBack);
+   }
+
+
     return (
      <button onClick={incrementCounter}>Counter using callback function{counterInCallBack}</button>
      );
+
 }
 
 export default CounterWithCallBack;
