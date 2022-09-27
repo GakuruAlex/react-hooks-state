@@ -5,6 +5,7 @@ function Counter() {
 
   function increment() {
     setCount(count + 1);
+    console.log("Counter without callBack is ",count);
   }
 
   return <button onClick={increment}>I have been clicked {count} times</button>;
